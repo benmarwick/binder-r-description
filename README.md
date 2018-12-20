@@ -1,5 +1,7 @@
 # Specifying an R environment by having a DESCRIPTION file
 
+If we specify R package dependencies in the DESCRIPTION, they will be installed and available to us in the RStudion in binder. 
+
 RStudio: [![Binder](http://mybinder.org/badge.svg)](http://beta.mybinder.org/v2/gh/benmarwick/binder-r-description/master?urlpath=rstudio)
 
 
