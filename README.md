@@ -4,6 +4,8 @@ If we specify R package dependencies in the DESCRIPTION, they will be installed 
 
 Here we are testing if we can use only the DESCRIPTION file to deploy Binder, and including some complex packages such as `sf` and the `tidyverse` in the `Imports` field. We are also using some GitHub-only packages via the `Remotes` field in the DESCRIPTION file.  
 
+The result is that `sf` fails to install, and we do not get the pkgs listed in the `Remotes` field. So we really cannot rely on the DESCRIPTION file to deply the Binder instance. We need to have an `install.R` with code to install from GitHub, and an `apt.txt` to install the linux libraries needed for complex pkgs like `sf`
+
 RStudio: [![Binder](http://mybinder.org/badge.svg)](http://beta.mybinder.org/v2/gh/benmarwick/binder-r-description/master?urlpath=rstudio)
 
 Binder supports using R and RStudio, with libraries pinned to a specific snapshot on [MRAN](https://mran.microsoft.com/documents/rro/reproducibility).
